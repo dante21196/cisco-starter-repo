@@ -16,10 +16,10 @@ export default function Dashboard() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <DataCard version="4" url="https://api.ipify.org?format=json"/>
+      <DataCard version="IPv4" url="https://api.ipify.org?format=json"/>
     </div>
     <div className="carousel-item">
-    <DataCard version="6" url="https://api64.ipify.org?format=json"/>
+    <DataCard version="Universal IPv4/IPv6" url="https://api64.ipify.org?format=json"/>
     </div>
     
   </div>
