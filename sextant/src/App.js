@@ -1,6 +1,7 @@
 
 import './App.css';
 import Dashboard from './Components/Dashboard';
+import Latency from './Components/Latency';
 import Navbar from './Components/Navbar';
 
 
@@ -9,6 +10,7 @@ function App() {
     <div>
       <Navbar/>
       <Dashboard/>
+      <Latency/>
     </div>
   );
 }
