@@ -1,13 +1,14 @@
 
 import './App.css';
+import Dashboard from './Components/Dashboard';
 import Navbar from './Components/Navbar';
-import DataCard from './DataCard';
+
 
 function App() {
   return (
     <div>
       <Navbar/>
-      <DataCard/>
+      <Dashboard/>
     </div>
   );
 }

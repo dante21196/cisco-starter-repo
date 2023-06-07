@@ -1,9 +1,13 @@
 import React from 'react'
 
 export default function DataCard() {
+  var mystyle={
+    'align' : 'center',
+    'max-width' : '60%'
+  }
   return (
-    <div className="container center my-5">
-      <div class="card text-bg-warning mb-3" style={{'max-width': '18rem'}}>
+    <div className="container center my-5" style={mystyle}>
+      <div class="card text-bg-warning mb-3">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h5 class="card-title">Warning card title</h5>
