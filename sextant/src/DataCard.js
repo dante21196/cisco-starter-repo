@@ -1,19 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function DataCard() {
+export default function DataCard(props) {
+  const [IP,setIP]=useState("");
+  const getIP= async()=>{
+ 
+    let url=props.url;
+    let data=await fetch(url);
+    let parsedData= await data.json();
+    setIP(parsedData.ip);
+    console.log(IP)  
+
+    
+   }
+
   var mystyle={
     'align' : 'center',
-    'max-width' : '60%'
+    'maxWidth' : '60%'
   }
   return (
-    <div className="container center my-5" style={mystyle}>
-      <div class="card text-bg-warning mb-3">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Warning card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   
+    <div className="container center my-5" style={mystyle} onLoad={getIP()}>
+      <div className="card text-bg-warning mb-3">
+  <div className="card-header"><h5 className="card-title">User's IPv{props.version} address</h5></div>
+  <div className="card-body">
+    
+    <p className="card-text">{IP}</p>
   </div>
     </div>
+ 
     </div>
+
   )
 }
